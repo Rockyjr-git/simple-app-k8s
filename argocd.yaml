@@ -7,11 +7,11 @@ spec:
   project: default
   source:
     repoURL: https://github.com/Rockyjr-git/simple-app-k8s.git
-    targetRevision: HEAD
-    path: deploy
+    # Specify your source details here
   destination:
     server: https://kubernetes.default.svc
     namespace: nginx-ns
+    # Specify your destination details here
   syncPolicy:
     automated:
       prune: true
@@ -22,4 +22,4 @@ spec:
     automated:
       syncWave: 1
   sync:
-    period: 10s  
+    period: 05s  # Set the sync time to 10 seconds
